@@ -53,14 +53,15 @@ app.use(cookieParser());
 
 // config express-session
 var sess = {
-  secret: 'CHANGE THIS SECRET',
+  secret: 'Lemurcattaattacrumel',
   cookie: {},
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true 
 };
 
 if (app.get('env') === 'production') {
   sess.cookie.secure = true; // serve secure cookies, requires https
+   // app.set('trust proxy', 1);
 }
 
 app.use(session(sess));
