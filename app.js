@@ -61,7 +61,7 @@ var sess = {
 
 if (app.get('env') === 'production') {
   sess.cookie.secure = true; // serve secure cookies, requires https
-   // app.set('trust proxy', 1);
+   app.set('trust proxy', 1);
 }
 
 app.use(session(sess));
